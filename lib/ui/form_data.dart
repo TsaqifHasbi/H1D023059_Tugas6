@@ -20,14 +20,16 @@ class FormDataState extends State<FormData> {
         title: const Text("Input Data"),
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        margin: const EdgeInsets.all(16),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             _textboxNama(),
+            const SizedBox(height: 15),
             _textboxNIM(),
+            const SizedBox(height: 15),
             _textboxTahunLahir(),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
             _tombolSimpan(),
           ],
         ),
@@ -39,7 +41,7 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "Nama",
-        labelStyle: TextStyle(fontSize: 14, color: Colors.grey),
+        border: OutlineInputBorder(),
       ),
       controller: _namaController,
     );
@@ -49,7 +51,7 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "NIM",
-        labelStyle: TextStyle(fontSize: 14, color: Colors.grey),
+        border: OutlineInputBorder(),
       ),
       controller: _nimController,
     );
@@ -59,7 +61,7 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "Tahun Lahir",
-        labelStyle: TextStyle(fontSize: 14, color: Colors.grey),
+        border: OutlineInputBorder(),
       ),
       controller: _tahunLahirController,
       keyboardType: TextInputType.number,
@@ -82,7 +84,6 @@ class FormDataState extends State<FormData> {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
       ),
       child: const Text('Simpan'),
     );
