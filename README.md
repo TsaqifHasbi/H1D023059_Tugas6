@@ -4,17 +4,13 @@
 
 Aplikasi sederhana yang menunjukkan cara mengirim data dari satu halaman ke halaman lain di Flutter.
 
----
-
-## 📋 Cara Kerja Passing Data
+## Cara Kerja Passing Data
 
 ### 1. **File-file yang Digunakan**
 
 - `main.dart` - Titik awal aplikasi
 - `form_data.dart` - Halaman form untuk input data
 - `tampil_data.dart` - Halaman untuk menampilkan data
-
----
 
 ### 2. **Proses Passing Data**
 
@@ -67,6 +63,7 @@ class TampilData extends StatelessWidget {
     required this.nim,
     required this.tahunLahir,
   });
+}
 ```
 
 `required` artinya data ini wajib dikasih pas bikin widget `TampilData`.
@@ -81,18 +78,12 @@ final int umur = DateTime.now().year - tahunLahir;
 Text("Nama saya $nama, NIM $nim, dan umur saya adalah $umur tahun")
 ```
 
----
+## Alur Singkat
 
-## 🔄 Alur Singkat
-
-```
 User isi form → Data masuk ke Controller → Klik Simpan →
 Data dikirim lewat Navigator → TampilData terima data → Tampilkan ke layar
-```
 
----
-
-## 🎯 Kenapa Pakai Cara Ini?
+## Kenapa Pakai Cara Ini?
 
 Metode **Constructor Parameter** ini paling simple dan cocok untuk:
 
@@ -100,18 +91,14 @@ Metode **Constructor Parameter** ini paling simple dan cocok untuk:
 - Data cuma dipake sekali
 - Gak perlu ribet pakai state management
 
----
-
-## 📱 Cara Jalankan
+## Cara Jalankan
 
 ```bash
 flutter pub get
 flutter run
 ```
 
----
+## Dibuat oleh
 
-## 👨‍💻 Dibuat oleh
-
-**Stephen Prasetya Chrismawan**  
-NIM: H1D021025
+**Tsaqif Hasbi Aghna Syarief**  
+NIM: H1D023059
